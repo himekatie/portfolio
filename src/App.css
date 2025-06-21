@@ -1,4 +1,13 @@
-.App {
+
+
+:root{
+  --dark:rgb(3, 3, 3);
+  --mid_dark:rgb(18, 52, 88);
+  --mid_light:rgb(212, 201, 190);
+  --light:rgb(241, 239, 236);
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

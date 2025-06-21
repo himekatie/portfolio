@@ -1,0 +1,11 @@
+
+body{
+    background-color: var(--light);
+    margin: 0;
+}
+.Homepage{
+    /* background-color: blue; */
+}
+h1{
+    color: black;
+}
