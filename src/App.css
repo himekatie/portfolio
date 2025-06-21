@@ -1,10 +1,11 @@
 
 
 :root{
-  --dark:rgb(3, 3, 3);
-  --mid_dark:rgb(18, 52, 88);
-  --mid_light:rgb(212, 201, 190);
-  --light:rgb(241, 239, 236);
+  --dark:rgb(54, 116, 181);
+  --mid_dark:rgb(87, 143, 202);
+  --mid_light: rgb(161, 227, 249);
+  --light:rgb(209, 248, 239);
+  --Body: rgb(219, 226, 239);
 }
 
 /* .App {
