@@ -6,6 +6,8 @@
   --mid_light: rgb(161, 227, 249);
   --light:rgb(209, 248, 239);
   --Body: rgb(219, 226, 239);
+  --paragraph: 'montserrat', sans-serif;
+  --code: 'roboto-mono', sans-serif;
 }
 
 /* .App {

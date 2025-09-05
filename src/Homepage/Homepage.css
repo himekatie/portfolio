@@ -1,11 +1,39 @@
 
-body{
-    background-color: var(--Body);
-    margin: 0;
-}
 .Homepage{
+
+    display: flex;
+    flex-direction: column;
     /* background-color: blue; */
+    .body{
+        padding-top: 60px;
+        /* display: flex; */
+        .images{
+        margin-top: 50px;
+        }
+        .top{
+            display: flex;
+            flex-direction: row-reverse;
+                .profile-pic {
+                width: 200px;
+                height: 200px;
+                /* border-radius: 50%;  makes it circular */
+                object-fit: cover;   /* prevents distortion */
+                object-position: center; 
+                margin: 20px;
+                }
+                .about-blurb {
+                    margin: 40px auto;
+                    max-width: 750px;
+                    text-align: center;
+                    font-size: 24px;
+                    font-family: var(--paragraph);
+                    color: #333;
+                }
+        }
+    }
+
 }
+
 h1{
     color: black;
 }

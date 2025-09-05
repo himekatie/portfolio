@@ -1,4 +1,9 @@
 .header{
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
     max-width: none;
     width: 100%;
     margin: 0px;
@@ -23,6 +28,10 @@
             font-size: 25px;
             cursor: pointer;
         }
+        h1:hover{
+            /* background-color: var(--mid_dark); */
+            color: white;
+        }
     }
 
     .right{
@@ -40,9 +49,11 @@
             border-radius: 2px; 
         }
         h2:hover{
-            background-color: var(--mid_dark);
+            /* background-color: var(--mid_dark); */
+            color: white;
         }
     }
+
 }
 @media (max-width: 768px) {
   .header {
