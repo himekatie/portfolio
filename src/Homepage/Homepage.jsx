@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Typed from "typewriter-effect";
 import Carousel from '../Carousel/Carousel';
 import Profile from '../images/tingyuan.jpg';
+import { Link } from "react-router-dom";
 
 
 function Homepage (){
@@ -15,12 +16,14 @@ function Homepage (){
                     <div className="top"> 
                         <img src={Profile} alt="Profile" className="profile-pic" />
                         <div className="about-blurb">
+                            <Link to= "/about" style = {{color: "black", textDecoration: "none"}}>
                                 <Typed onInit={(typewriter) => {
                                     typewriter
-                                    .typeString('Hi, I’m Katie Bates, a senior at Rensselaer Polytechnic Institute (RPI) studying Computer Science.')
-                                    .pauseFor(500) 
-                                    .typeString('<br/>I have a strong passion for web development and enjoy creating websites that are both functional and user-friendly.')
-                                    .pauseFor(500)
+                                    .typeString('Hi, I’m Katie Bates, a senior at Rensselaer Polytechnic Institute (RPI) studying Computer Science.<br/>')
+                                    .pauseFor(1000) 
+                                    
+                                    .typeString('<br/>I have a strong passion for web development and enjoy creating websites that are both functional and user-friendly.<br/>')
+                                    .pauseFor(1000)
                                     .typeString('<br/>This site highlights my projects, skills, and experiences as I work toward a career in software development.')
                                     .start();
                                 }}
@@ -28,9 +31,11 @@ function Homepage (){
                                     autoStart: true,
                                     loop: false,
                                     cursor: '_',
-                                    delay: 34
+                                    delay: 25
                                 }}
                                 />
+                                </Link>
+                                <h4>Link to Github Respository for website</h4>
                         </div>
                     </div>
                         <div className="images">

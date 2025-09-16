@@ -14,6 +14,9 @@ function Header() {
                 <h2>About</h2>
                 <Link to= "/projects" style = {{color: "black", textDecoration: "none"}}><h2>Projects</h2></Link>
                 <h2>Contact Me</h2>
+                <h2>Github</h2>
+                <h2>Linked</h2>
+                
             </div>
         </div>
     );

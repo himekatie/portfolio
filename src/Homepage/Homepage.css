@@ -23,7 +23,7 @@
                 }
                 .about-blurb {
                     margin: 40px auto;
-                    max-width: 750px;
+                    max-width: 780px;
                     text-align: center;
                     font-size: 24px;
                     font-family: var(--paragraph);
@@ -36,4 +36,8 @@
 
 h1{
     color: black;
+}
+
+h4{
+    font-size: 10px;
 }
