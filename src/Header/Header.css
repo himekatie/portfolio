@@ -29,7 +29,6 @@
             cursor: pointer;
         }
         h1:hover{
-            /* background-color: var(--mid_dark); */
             color: white;
         }
     }
@@ -49,36 +48,52 @@
             border-radius: 2px; 
         }
         h2:hover{
-            /* background-color: var(--mid_dark); */
             color: white;
         }
     }
-
 }
-@media (max-width: 768px) {
-  .header {
+
+.nav-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-link {
     display: flex;
-    flex-direction: column;
-    /* flex-direction: row; */
-    /* align-items: flex-start; */
     align-items: center;
-  }
-
-  .header .right {
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    gap: 10px;
-    margin-top: 10px;
-    margin-left: 30px;
-  }
-
-  .header .left h1 {
-    font-size: 20px;
-  }
-
-  .header .right h2 {
-    font-size: 15px;
-  }
+    opacity: 0.85;
 }
 
+.icon-link:hover .nav-icon {
+    transform: scale(1.15);
+    opacity: 1;
+}
 
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .right {
+        gap: 10px;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+
+    .header .left h1 {
+        font-size: 20px;
+    }
+
+    .header .right h2 {
+        font-size: 15px;
+    }
+
+    .nav-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
