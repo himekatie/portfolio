@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import './Carousel.css'
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 import pic1 from '../images/danheng.jpg';
 import pic2 from '../images/dragondanheng.jpg';
 import pic3 from '../images/bigdanheng.jpg';

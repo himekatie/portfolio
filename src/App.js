@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Homepage from './Homepage/Homepage';
 import Projects from './Projects/Projects';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
