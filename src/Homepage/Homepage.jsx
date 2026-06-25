@@ -2,7 +2,7 @@ import React from "react";
 import './Homepage.css';
 import Header from '../Header/Header';
 import Carousel from '../Carousel/Carousel';
-import Profile from '../images/tingyuan.jpg';
+import Profile from '../images/profile+pumpkin.jpg';
 import { Link } from "react-router-dom";
 
 function Homepage() {

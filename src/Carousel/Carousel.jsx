@@ -1,17 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import './Carousel.css'
 // import { ChevronLeft, ChevronRight } from "lucide-react";
-import pic1 from '../images/danheng.jpg';
-import pic2 from '../images/dragondanheng.jpg';
-import pic3 from '../images/bigdanheng.jpg';
+import pic1 from '../images/timelesssound_HackRPI2025.png';
+import pic2 from '../images/Meridian_Homepage.png';
+import pic3 from '../images/ComedyFeud.png';
 import pic4 from '../images/bailu.jpg';
 
 export default function ImageCarousel({
-  images = [
-    pic1,
-    pic2,
-    pic3,
-    pic4
+  items = [
+    { src: pic1, title: "Timeless Sound — HackRPI 2025" },
+    { src: pic2, title: "Meridian — RCOS 2024-2026" },
+    { src: pic3, title: "UPAC Family Feud Website — Club Event 2025" },
+    { src: pic4, title: "Urbanvoice — HackRPI 2024" },
+    { src: pic4, title: "Choose your own Adventure — HackRPI 2023" },
+    { src: pic4, title: "BudgetScout — Software Design & Documentation 2026" },
   ],
   interval = 3000, // auto-rotate every 3s
   pauseAfterAction = 5000, // pause for 5s after manual interaction
@@ -23,12 +25,12 @@ export default function ImageCarousel({
   const timeoutRef = useRef(null);
 
   const prevSlide = () => {
-    setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+    setIndex((i) => (i === 0 ? items.length - 1 : i - 1));
     triggerPause();
   };
 
   const nextSlide = () => {
-    setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
+    setIndex((i) => (i === items.length - 1 ? 0 : i + 1));
     triggerPause();
   };
 
@@ -46,60 +48,64 @@ export default function ImageCarousel({
 
   // autoplay
   useEffect(() => {
-    if (paused || images.length === 0) return;
+    if (paused || items.length === 0) return;
     const id = setInterval(() => {
-      setIndex((i) => (i + 1) % images.length);
+      setIndex((i) => (i + 1) % items.length);
     }, interval);
     return () => clearInterval(id);
-  }, [images.length, interval, paused]);
+  }, [items.length, interval, paused]);
 
-  const prevIndex = (index - 1 + images.length) % images.length;
-  const nextIndex = (index + 1) % images.length;
+  const prevIndex = (index - 1 + items.length) % items.length;
+  const nextIndex = (index + 1) % items.length;
 
   return (
-    <div
-      className="carousel-wrapper"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      <button className="arrow arrow-left" onClick={prevSlide}>
-        ←
-      </button>
+    <div className="carousel-container">
+      <h3 className="carousel-title">{items[index].title}</h3>
 
-      <div className="carousel">
-        {/* previous (clickable) */}
-        <img
-          key={prevIndex}
-          src={images[prevIndex]}
-          alt="previous"
-          className="carousel-image prev"
-          draggable={false}
-          onClick={() => goToSlide(prevIndex)}
-        />
+      <div
+        className="carousel-wrapper"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <button className="arrow arrow-left" onClick={prevSlide}>
+          ←
+        </button>
 
-        {/* active */}
-        <img
-          key={index}
-          src={images[index]}
-          alt="active"
-          className="carousel-image active"
-          draggable={false}
-        />
+        <div className="carousel">
+          {/* previous (clickable) */}
+          <img
+            key={prevIndex}
+            src={items[prevIndex].src}
+            alt={items[prevIndex].title}
+            className="carousel-image prev"
+            draggable={false}
+            onClick={() => goToSlide(prevIndex)}
+          />
 
-        {/* next (clickable) */}
-        <img
-          key={nextIndex}
-          src={images[nextIndex]}
-          alt="next"
-          className="carousel-image next"
-          draggable={false}
-          onClick={() => goToSlide(nextIndex)}
-        />
+          {/* active */}
+          <img
+            key={index}
+            src={items[index].src}
+            alt={items[index].title}
+            className="carousel-image active"
+            draggable={false}
+          />
+
+          {/* next (clickable) */}
+          <img
+            key={nextIndex}
+            src={items[nextIndex].src}
+            alt={items[nextIndex].title}
+            className="carousel-image next"
+            draggable={false}
+            onClick={() => goToSlide(nextIndex)}
+          />
+        </div>
+
+        <button className="arrow arrow-right" onClick={nextSlide}>
+          →
+        </button>
       </div>
-
-      <button className="arrow arrow-right" onClick={nextSlide}>
-        →
-      </button>
     </div>
   );
 }

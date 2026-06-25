@@ -4,6 +4,22 @@
   max-width: 900px;   /* carousel max width */
   margin: 0 auto;     /* center horizontally only */
 }
+.carousel-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel-title {
+  font-family: 'Playfair Display', Georgia, serif; /* match your site's serif headings — adjust if different */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  min-height: 1.8rem; /* prevents layout shift if titles vary in length */
+  transition: opacity 0.3s ease;
+}
 
 .carousel {
   display: flex;
