@@ -12,7 +12,7 @@ function Header() {
             </div>
             <div className="right">
                 <Link to="/" style={{ color: "black", textDecoration: "none" }}><h2>Home</h2></Link>
-                <h2>About</h2>
+                <Link to="/about" style={{ color: "black", textDecoration: "none" }}><h2>About</h2></Link>
                 <Link to="/projects" style={{ color: "black", textDecoration: "none" }}><h2>Projects</h2></Link>
                 <h2>Contact Me</h2>
 
