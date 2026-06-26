@@ -14,15 +14,15 @@ function Homepage() {
                     <img src={Profile} alt="Profile" className="profile-pic" />
                     <div className="about-blurb">
                         <Link to="/about" style={{ color: "black", textDecoration: "none" }}>
-                            <p>
-                                Hi, I'm Katie Bates, a senior at Rensselaer Polytechnic Institute (RPI) studying Computer Science.
-                            </p>
-                            <p>
-                                I have a strong passion for web development and enjoy creating websites that are both functional and user-friendly.
-                            </p>
-                            <p>
-                                This site highlights my projects, skills, and experiences as I work toward a career in software development.
-                            </p>
+                        <p>
+                            Hi, I'm Katie Bates, a Computer Science graduate of Rensselaer Polytechnic Institute (RPI).
+                        </p>
+                        <p>
+                            I have a strong passion for web development and enjoy creating websites that are both functional and user-friendly.
+                        </p>
+                        <p>
+                            This site highlights my projects, skills, and experiences as I pursue a career in software development.
+                        </p>
                         </Link>
                        <a 
     href="https://github.com/himekatie/portfolio" 

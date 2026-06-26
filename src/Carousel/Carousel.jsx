@@ -1,26 +1,13 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import './Carousel.css'
-// import { ChevronLeft, ChevronRight } from "lucide-react";
-import pic1 from '../images/timelesssound_HackRPI2025.png';
-import pic2 from '../images/Meridian_Homepage.png';
-import pic3 from '../images/ComedyFeud.png';
-import pic4 from '../images/bailu.jpg';
-import pic5 from '../images/Chooseyourownadventure.png';
+import { projects } from '../data/projects';
 
 export default function ImageCarousel({
-  items = [
-    { src: pic1, title: "Timeless Sound — HackRPI 2025" },
-    { src: pic2, title: "Meridian — RCOS 2024-2026" },
-    { src: pic3, title: "UPAC Family Feud Website — Club Event 2025" },
-    { src: pic4, title: "Urbanvoice — HackRPI 2024" },
-    { src: pic5, title: "Choose your own Adventure — HackRPI 2023" },
-    { src: pic4, title: "BudgetScout — Software Design & Documentation 2026" },
-  ],
-  interval = 3000, // auto-rotate every 3s
-  pauseAfterAction = 5000, // pause for 5s after manual interaction
+  items = projects,
+  interval = 3000,
+  pauseAfterAction = 5000,
 }) {
-
-
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef(null);
@@ -40,14 +27,12 @@ export default function ImageCarousel({
     triggerPause();
   };
 
-  // helper: pause auto-rotate for a bit after user action
   const triggerPause = () => {
     setPaused(true);
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => setPaused(false), pauseAfterAction);
   };
 
-  // autoplay
   useEffect(() => {
     if (paused || items.length === 0) return;
     const id = setInterval(() => {
@@ -68,34 +53,27 @@ export default function ImageCarousel({
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <button className="arrow arrow-left" onClick={prevSlide}>
-          ←
-        </button>
+        <button className="arrow arrow-left" onClick={prevSlide}>←</button>
 
         <div className="carousel">
-          {/* previous (clickable) */}
           <img
             key={prevIndex}
-            src={items[prevIndex].src}
+            src={items[prevIndex].thumbnail}
             alt={items[prevIndex].title}
             className="carousel-image prev"
             draggable={false}
             onClick={() => goToSlide(prevIndex)}
           />
-
-          {/* active */}
           <img
             key={index}
-            src={items[index].src}
+            src={items[index].thumbnail}
             alt={items[index].title}
             className="carousel-image active"
             draggable={false}
           />
-
-          {/* next (clickable) */}
           <img
             key={nextIndex}
-            src={items[nextIndex].src}
+            src={items[nextIndex].thumbnail}
             alt={items[nextIndex].title}
             className="carousel-image next"
             draggable={false}
@@ -103,10 +81,12 @@ export default function ImageCarousel({
           />
         </div>
 
-        <button className="arrow arrow-right" onClick={nextSlide}>
-          →
-        </button>
+        <button className="arrow arrow-right" onClick={nextSlide}>→</button>
       </div>
+
+      <Link to={`/projects/${items[index].slug}`} className="view-project-link">
+        View Project →
+      </Link>
     </div>
   );
 }

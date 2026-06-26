@@ -1,0 +1,128 @@
+.project-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #4a90c4;
+}
+
+.project-detail h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 28px;
+  max-width: 700px;
+}
+
+/* tech stack pills */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.tech-stack li {
+  background: #e3f2fb;
+  color: #1a5276;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* live site / github links */
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* first link styled as primary (live site) */
+.project-links a:first-child {
+  background: #4a90c4;
+  color: white;
+}
+
+.project-links a:first-child:hover {
+  background: #3a7bab;
+}
+
+/* second link styled as secondary (github) */
+.project-links a:not(:first-child) {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1.5px solid #1a1a1a;
+}
+
+.project-links a:not(:first-child):hover {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* photo gallery */
+.project-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-photos img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.project-photos img:hover {
+  transform: scale(1.02);
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .project-detail h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links a {
+    text-align: center;
+  }
+}

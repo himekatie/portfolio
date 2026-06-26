@@ -1,0 +1,32 @@
+.about-page {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  padding: 100px 24px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 720px;
+  width: 100%;
+}
+
+.about-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #0d3b3b, #0b6ea8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.about-content p {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin-bottom: 1.5rem;
+}
