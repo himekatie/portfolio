@@ -5,6 +5,7 @@ import pic1 from '../images/timelesssound_HackRPI2025.png';
 import pic2 from '../images/Meridian_Homepage.png';
 import pic3 from '../images/ComedyFeud.png';
 import pic4 from '../images/bailu.jpg';
+import pic5 from '../images/Chooseyourownadventure.png';
 
 export default function ImageCarousel({
   items = [
@@ -12,7 +13,7 @@ export default function ImageCarousel({
     { src: pic2, title: "Meridian — RCOS 2024-2026" },
     { src: pic3, title: "UPAC Family Feud Website — Club Event 2025" },
     { src: pic4, title: "Urbanvoice — HackRPI 2024" },
-    { src: pic4, title: "Choose your own Adventure — HackRPI 2023" },
+    { src: pic5, title: "Choose your own Adventure — HackRPI 2023" },
     { src: pic4, title: "BudgetScout — Software Design & Documentation 2026" },
   ],
   interval = 3000, // auto-rotate every 3s

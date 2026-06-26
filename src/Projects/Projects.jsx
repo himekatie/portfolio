@@ -5,6 +5,7 @@ import pic1 from '../images/timelesssound_HackRPI2025.png';
 import pic2 from '../images/Meridian_Homepage.png';
 import pic3 from '../images/ComedyFeud.png';
 import pic4 from '../images/bailu.jpg';
+import pic5 from '../images/Chooseyourownadventure.png';
 
 const projects = [
   {
@@ -36,11 +37,11 @@ const projects = [
     link: "https://github.com/himekatie/urbanvoice",
   },
   {
-    src: pic4,
+    src: pic5,
     tag: "HackRPI 2023",
     title: "Choose Your Own Adventure",
     blurb: "An interactive, branching-narrative game where every choice you make rewrites the story ahead.",
-    link: "https://github.com/himekatie/choose-your-own-adventure",
+    link: "https://github.com/himekatie/ChooseYourOwnAdventure",
   },
   {
     src: pic4,
